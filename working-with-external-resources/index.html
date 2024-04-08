@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- page metadata. -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stimulus - Working with external resources</title>
+
+		<!-- dependencies -->
+		<script type="importmap">
+			{
+				"imports": {
+					"@hotwired/stimulus": "https://unpkg.com/@hotwired/stimulus@3.2.2/dist/stimulus.js"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Learning Stimulus</h1>
+		</header>
+
+		<main>
+			<section
+				data-content-loader-url-value="/messages.html"
+				data-content-loader-refresh-interval-value="5000"
+				data-controller="content-loader"
+			></section>
+		</main>
+
+		<script defer type="module" src="./js/app.js"></script>
+	</body>
+</html>
