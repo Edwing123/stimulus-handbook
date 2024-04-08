@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- page metadata. -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stimulus</title>
+
+		<!-- dependencies -->
+		<script type="importmap">
+			{
+				"imports": {
+					"@hotwired/stimulus": "https://unpkg.com/@hotwired/stimulus@3.2.2/dist/stimulus.js"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Edwin Garcia</h1>
+		</header>
+
+		<main>
+			<section data-controller="app">
+				<div class="menu">
+					<button
+						data-app-url-param="/pages/home.html"
+						data-action="app#load"
+					>
+						Home
+					</button>
+					<button
+						data-app-url-param="/pages/about.html"
+						data-action="app#load"
+					>
+						About me
+					</button>
+					<button
+						data-app-url-param="/pages/blog.html"
+						data-action="app#load"
+					>
+						Blog
+					</button>
+
+					<div data-app-target="outlet"></div>
+				</div>
+			</section>
+		</main>
+
+		<script defer type="module" src="./js/app.js"></script>
+	</body>
+</html>
