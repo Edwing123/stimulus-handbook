@@ -1,3 +1,4 @@
-import { Application } from "@hotwired/stimulus"
+import { Application, Controller } from "@hotwired/stimulus";
 
-const app = Application.start()
+const app = Application.start();
+app.debug = true;
